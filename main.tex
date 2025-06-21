@@ -1,0 +1,122 @@
+\documentclass[12pt]{book}
+\usepackage{graphicx}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,raster,many}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[document]{ragged2e}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage{tablefootnote}
+\usepackage{enumitem}
+\usepackage[toc,titletoc,title]{appendix}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[toc,section=chapter, acronym]{glossaries-extra}
+\usepackage{wasysym}
+\usepackage{CormorantGaramond}
+
+% \loadglsentries{Summaries/glossary.tex}
+% \loadglsentries{acronyms.tex}
+
+% \input{Case Summaries.tex}
+
+% \makeglossaries
+
+\geometry{a4paper, portrait, margin=1in}
+
+\renewcommand{\chaptername}{Topic}
+\setlistdepth{6}
+
+\newtcolorbox{definition}[1]{fonttitle = \bfseries\scshape\centering\large, attach boxed title to top center= {yshift=-3mm, yshifttext=-1mm}, boxed title style ={size=small, colback=White}, coltitle = WildStrawberry, colback = White, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+% \newtcolorbox[auto counter, number within=section, list inside=cases]{casedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = Emerald!75, colback = Emerald!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+% \newtcolorbox[auto counter, number within=section, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = RubineRed!75, colback = RubineRed!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
+
+ \newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Emerald!20, colframe=Emerald!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}% `frame hidden' is removed
+
+\newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Blue!20, colframe=Blue!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
+
+\newtcolorbox[auto counter, number within=subsection, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=RubineRed!20, colframe=RubineRed!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
+
+\newtcolorbox[auto counter, number within=subsection, list inside=tutorial]{tutorialquestion}{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Gray!20, colframe=Gray!20, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
+
+\newcommand{\statute}[1]{\textcolor{RubineRed}{#1}}
+\newcommand{\case}[1]{\textcolor{Emerald}{#1}}
+\newcommand{\convention}[1]{\textcolor{Blue}{#1}} 
+\newcommand{\article}[1]{\textcolor{OrangeRed}{#1}} 
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\Huge\bfseries\scshape LAWS1021: \\ Public Law and Statutory Interpretation}
+\author{Aniket Sinha}
+\date{November 2025}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+% Increase the spacing between the number and the entry name in the tcblistof lists
+\renewcommand{\numberline}[1]{#1\hspace{1em}} % Adjust '1em' as needed
+
+% \tcblistof[\chapter*]{cases}{List of Cases}
+
+% \tcblistof[\chapter*]{statute}{List of Statute}
+
+% \tcblistof[\chapter*]{conventions}{List of Conventions}
+
+\flushleft
+
+\mainmatter
+
+\chapter{Introduction and History of Australian Constitutions}
+\input{Content/Topic 1 - Introduction and History of Australian Constitutions.tex}
+
+\chapter{Legislative Power}
+\input{Content/Topic 2 - Legislative Power.tex}
+
+\chapter{Constitutional Change}
+\input{Content/Topic 3 - Constitutional Change.tex}
+
+\chapter{First Nations and Australian Public Law}
+\input{Content/Topic 4 - First Nations and Australian Public Law.tex}
+
+\chapter{The Representative Parliament}
+\input{Content/Topic 5 - The Representative Parliament.tex}
+
+\chapter{The Executive}
+\input{Content/Topic 6 - The Executive.tex}
+
+\chapter{Chapter III and the Separation of Judicial Power}
+\input{Content/Topic 7 - Chapter III and the Separation of Judicial Power.tex}
+
+\chapter{The Separated Judicial Power in Context}
+\input{Content/Topic 8 - The Separated Judicial Power in Context.tex}
+
+% \appendix
+% \chapter{Scaffolds}
+% \input{Scaffold.Tex}
+
+% \chapter{Tutorial Problems}
+% \input{Tutorials.tex}
+
+% \setglossarystyle{listgroup}
+% \glsaddall
+% \printglossary[type=summaries,nonumberlist, title={Case Summaries}]
+
+% \glsaddall
+% \printglossary[type=main, nonumberlist, title={Glossary}]
+
+\end{document}
