@@ -41,7 +41,26 @@
 
 % \newtcolorbox[auto counter, number within=section, list inside=statute]{statutedetails}[1]{fonttitle = \bfseries\centering\large, coltitle = Black, colframe = RubineRed!75, colback = RubineRed!15, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}
 
- \newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Emerald!20, colframe=Emerald!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced}% `frame hidden' is removed
+\newtcolorbox[auto counter, number within=subsection, list inside=cases]{casedetails}[5]{%
+    fonttitle = \bfseries, 
+    coltitle = Black, 
+    colback = White, 
+    colbacktitle=Emerald!30, 
+    colframe=Emerald!30, 
+    title={#1}, 
+    enhanced, 
+    breakable, 
+    skin first=enhanced, 
+    skin middle=enhanced, 
+    skin last=enhanced,
+    before upper={
+        \flushleft
+        \tcbsubtitle{Facts} #2 
+        \tcbsubtitle{Issues} #3 
+        \tcbsubtitle{Decision} #4
+        \tcbsubtitle{Other Notes} #5
+    }
+}
 
 \newtcolorbox[auto counter, number within=subsection, list inside=conventions]{conventiondetails}[1]{fonttitle = \bfseries, coltitle = Black, colback = White, colbacktitle=Blue!20, colframe=Blue!20, title={#1}, enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced} % `frame hidden' is removed
 
